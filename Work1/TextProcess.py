@@ -1,7 +1,7 @@
 import csv
 
 # 打开原始的 CSV 文件和新的 CSV 文件
-with open('deviced.csv', 'r', newline='' , encoding="gbk") as input_file, open('output.csv', 'w', newline='' , encoding="gbk") as output_file:
+with open('newTag.csv', 'r', newline='' , encoding="utf-8") as input_file, open('NewTag2.csv', 'w', newline='' , encoding="utf-8") as output_file:
     # 创建 CSV 读取器和写入器
     reader = csv.reader(input_file)
     writer = csv.writer(output_file)

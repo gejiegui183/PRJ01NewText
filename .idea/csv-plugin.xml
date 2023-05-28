@@ -3,42 +3,42 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\Processed2.csv">
+        <entry key="\Work1\tag.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\common.csv">
+        <entry key="\Work2\DevicedData.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\deviced.csv">
+        <entry key="\Work2\EmotionMark.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\output.csv">
+        <entry key="\Work2\EmotionMark2.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\processed.csv">
+        <entry key="\Work2\FinalData.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\tag.csv">
+        <entry key="\Work2\TestDataProcess3.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

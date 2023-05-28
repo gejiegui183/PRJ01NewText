@@ -3,11 +3,12 @@ import string
 from zhon.hanzi import punctuation
 import csv
 from snownlp import SnowNLP
+import pandas as pd
 
 class PreProcess:
     def __init__(self):
         self.txtPath = "common.csv"
-        self.newFile = "processed.csv"
+        self.newFile = "newProcessed.csv"
         self.newFile2 = "processed2.csv"
         self.tagFile = "tag.csv"
         self.devicedFile = "deviced.csv"
@@ -41,7 +42,7 @@ class PreProcess:
                 witer.writerow([i])
 
     def analysis(self):
-        with open(self.newFile , "r" , newline="" , encoding="gbk") as file:
+        with open(self.newFile , "r" , newline="" , encoding="utf-8") as file:
             reader = csv.reader(file)
             for row in reader:
                 try:
@@ -58,19 +59,18 @@ class PreProcess:
 
 
     def saveTag(self):
-        file = open(self.tagFile , "w" , encoding="gbk")
+        file = open(self.tagFile , "w" , encoding="utf-8")
         writer = csv.writer(file, delimiter=",")
         for i in self.newTag:
-            print(i[0],",",i[1])
-            # writer.writerow(zip(i[0], i[1]))
+            writer.writerow([i[0], i[1]])
 
 
     def starter(self):
-        pass
+        # pass
         # self.readFile()
         # self.cacheWriteIn()
-        # self.analysis()
-        # self.saveTag()
+        self.analysis()
+        self.saveTag()
         # self.test()
 
 
