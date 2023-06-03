@@ -26,10 +26,10 @@ class Predict:
         #     # print(type(item))
         #     predictions = model.predict()
         data = pd.read_csv('EmotionMark.csv', sep=',', header=None)[0][:4167]
-        print(data)
+        # print(data)
         # print(type(item))
-        # predictions = model.predict([data])
-        # print(predictions)
+        predictions = model.predict([data])
+        print(predictions)
 
 if __name__ == '__main__':
     P = Predict()

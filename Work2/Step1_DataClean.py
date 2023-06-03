@@ -31,29 +31,6 @@ class DataClean:
         chineseText = re.sub(r"[^\u4e00-\u9fff]+", "", newS2)
         self.orgDataList.append(chineseText)
 
-    def cutRepeat(self):
-        with open("D:\Python项目\文本挖掘\Exam\PRJ01\Work2\Data\Casch01.csv" , "w" , encoding="utf-8") as file2:
-            writer = csv.writer(file2)
-            for item in self.orgDataList:
-                writer.writerow([item])
-
-        with open('D:\Python项目\文本挖掘\Exam\PRJ01\Work2\Data\Casch01.csv', 'r', newline='', encoding="utf-8") as input_file, open('D:\Python项目\文本挖掘\Exam\PRJ01\Work2\Data\Casch02.csv', 'w', newline='',
-                                                                                       encoding="utf-8") as output_file:
-            # 创建 CSV 读取器和写入器
-            reader = csv.reader(input_file)
-            writer = csv.writer(output_file)
-
-            # 遍历 CSV 文件的每一行
-            for row in reader:
-                # 检查行是否为空行
-                if any(field.strip() for field in row):
-                    # 如果当前行不是空行，则将其写入新的 CSV 文件
-                    writer.writerow(row)
-        data = pd.read_csv("D:\Python项目\文本挖掘\Exam\PRJ01\Work2\Data\Casch02.csv", encoding="utf-8")
-        data = data.drop_duplicates()
-        data.to_csv("D:\Python项目\文本挖掘\Exam\PRJ01\Work2\Data\FinalData.csv", index=False)
-        os.remove("D:\Python项目\文本挖掘\Exam\PRJ01\Work2\Data\Casch02.csv")
-        os.remove("D:\Python项目\文本挖掘\Exam\PRJ01\Work2\Data\Casch01.csv")
 
     def emotionMark(self):
         vector = TfidfVectorizer()
